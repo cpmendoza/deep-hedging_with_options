@@ -21,7 +21,6 @@ import math
 from pathlib import Path
 from scipy.stats import norm
 from src.features.market_simulator import *
-from sklearn.preprocessing import MinMaxScaler
 
 
 def data_sets_preparation(temporality, S, B, H, hedged_options_maturities, hedged_option_types, hedged_moneyness, hedged_positions, hedging_intruments_maturity, hedging_option_types, hedging_option_moneyness, dynamics, lower_bound, r, q, delta, tc, issmile, trainphase):
