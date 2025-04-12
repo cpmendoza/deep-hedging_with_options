@@ -586,7 +586,7 @@ def train_network(network, nbs_point_traj, batch_size, nbs_input, nbs_units, nbs
     finally:
         #change dir back to original working directory (owd)
         os.chdir(owd)
-    np.save(os.path.join(main_folder, f"data/results/Training/results_extra/loss_functions/loss_{name}.npy"),loss_train_epoch)
+    #np.save(os.path.join(main_folder, f"data/results/Training/results_extra/loss_functions/loss_{name}.npy"),loss_train_epoch)
 
     return loss_train_epoch
 
