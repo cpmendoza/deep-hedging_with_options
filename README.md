@@ -34,8 +34,8 @@ The Python script (.py file) for executing the pipeline from the terminal can be
 - Clone the project repository:
 
 ```nohighlight
-git clone https://github.com/OctavioPM/DeepHedging_JIVR.git
-cd DeepHedging_JIVR
+git clone https://github.com/cpmendoza/deep-hedging_with_options.git
+cd deep-hedging_with_options
 ```
 
 - Create and activate a virtual environment:
