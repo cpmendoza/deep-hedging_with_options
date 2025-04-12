@@ -92,3 +92,4 @@ Werkzeug==3.0.0
 wheel==0.41.2
 wrapt==1.14.1
 zipp==3.17.0
+PyYAML==6.0.2

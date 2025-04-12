@@ -21,7 +21,6 @@ import math
 from pathlib import Path
 from scipy.stats import norm
 from src.features.market_simulator import *
-from sklearn.preprocessing import MinMaxScaler
 from src.visualization.strategy_evaluation import delta_gamma
 
 
