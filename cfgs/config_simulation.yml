@@ -1,0 +1,28 @@
+simulation:
+    number_simulations: 500000
+    #Number of paths to simulate
+    number_days: 63
+    #Time horizon for simulation
+    vol_lower_bound: 0.01
+    #Minimum threshold of 0.01 is applied to the volatility surface
+    size_step: 1/252
+    #Rebalancing frequency (Our approach consider daily rebalancing based on 252 business days)
+    r: 0.026623194
+    #Annualized continuously compounded risk-free rate
+    q: 0.01772245
+    #Annualized underlying asset dividend yield
+    seed: 43
+    #seed to ensure replicability
+    number_simulations_batch: 160
+    #Simulation per batch to speed up the process
+    stock_price: 100
+    #Initial value of the stock price
+    tc_underlying: 0.05
+    #Proportional transaction cost for the underlying asset in (%)
+    tc_options: 2
+    #Proportional transaction cost for hedging options in (%)
+
+
+
+
+

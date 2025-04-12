@@ -1,0 +1,41 @@
+agent:
+
+    # First layer of parameters - Hedged portfolio composition
+    hedged_options_maturities : [63,63]    #Option maturities for instruments to hedge
+    hedged_option_types : [False,True]     #Option types {Call: False, Put: True}
+    hedged_moneyness : ["ATM","ATM"]       #Option moneyness for instruments to hedge {"ATM","OTM","ITM"}
+    hedged_positions : [1,1]               #Number of shares of each option to hedge
+
+    # Parameters of hedging options (the risk-free asset and the underlying are considered by default)
+    hedging_intruments_maturity : []      #Option maturities for hedging instruments
+    hedging_option_types : []             #Option types {Call: False, Put: True}
+    hedging_option_moneyness : []         #Option moneyness for hedging instruments {"ATM","OTM","ITM"}
+    dynamics : 'static'                   #Simulation type {Single intrument: 'static', New instrument every day: 'dynamic'}
+    #'static' simulation considers that the time-to-maturity of hedging options decreases over time
+    #'dynamic' simulation considers a new hedging option everyday
+
+    # Second layer of parameters 
+    network: "RNNFNN"             
+    #Neural network architecture {"LSTM","RNNFNN","FFNN"}
+    batch_size: 1000                 
+    #batch size {296,1000}
+    nbs_units: 56                   
+    #neurons per layer/cell
+    loss_type: "MSE"               
+    #loss function {"CVaR","MSE","SMSE"}
+    lr: 0.0005               
+    #learning rate of the Adam optimizer
+    dropout_par: 0.5                  
+    #dropout regularization parameter
+
+    # Third layer of parameters
+    riskaversion: 0.95                 
+    #CVaR confidence level (0,1)
+    epochs: 50                    
+    #Number of epochs, training iterations 
+
+    # Third layer of parameters
+    display_plot: False                 
+    #Display plot of training and validation loss
+
+
