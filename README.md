@@ -95,12 +95,14 @@ python delta_gamma_pipeline.py
 │
 ├── src                         <- Source code for use in this project.
 │   │
-│   ├── data                    <- Scripts to download and generate data.
-│   │   └── data_loader.py         <- Script to transform data into the right format for the models.
+│   ├── data                                 <- Scripts to download and generate data.
+│   │   ├── full_data_loader_delta_gamma.py  <- Script to transform data into the right format for delta gamma hedging.
+│   │   └── full_data_loader.py              <- Script to transform data into the right format for the deep rl models.
 │   │
 │   ├── features                   <- Scripts to generate market environment.
 │   │   ├── jivr_simulation.py     <- Script to generate JIVR model features.
-│   │   └── nig_simulation.py      <- Script to generate NIG random variables simulation.
+│   │   ├── nig_simulation.py      <- Script to generate NIG random variables simulation.
+│   │   └── market_simulator.py    <- Script to simulate market dynamics.
 │   │
 │   ├── models                             <- Scripts to train models and then use trained models to make
 │   │   │                                     hedging strategies.
