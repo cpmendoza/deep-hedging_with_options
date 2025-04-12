@@ -246,10 +246,10 @@ class implied_volatily_surface_vec(object):
 
         pd.DataFrame(random_sample).to_csv(os.path.join(main_folder,'data','processed','training',f"random_sample_{self.time_steps}.csv"))
 
-        #np.save(os.path.join(main_folder,'data','processed','training',f"Stock_paths__random_f_{self.time_steps}.npy"),Stock_paths[random_sample,:])
-        #np.save(os.path.join(main_folder,'data','processed','training',f"Betas_simulation__random_f_{self.time_steps}.npy"),betas_random[random_sample,:,:])
-        #np.save(os.path.join(main_folder,'data','processed','training',f"H_simulation__random_f_{self.time_steps}.npy"),h_t_random[random_sample,:,:]) 
-        #np.save(os.path.join(main_folder,'data','processed','training',f"Returns_random__random_f_{self.time_steps}.npy"),returns_random[random_sample,:])
+        np.save(os.path.join(main_folder,'data','processed','training',f"Stock_paths__random_f_{self.time_steps}.npy"),Stock_paths[random_sample,:])
+        np.save(os.path.join(main_folder,'data','processed','training',f"Betas_simulation__random_f_{self.time_steps}.npy"),betas_random[random_sample,:,:])
+        np.save(os.path.join(main_folder,'data','processed','training',f"H_simulation__random_f_{self.time_steps}.npy"),h_t_random[random_sample,:,:]) 
+        np.save(os.path.join(main_folder,'data','processed','training',f"Returns_random__random_f_{self.time_steps}.npy"),returns_random[random_sample,:])
 
         print("-- Simulation completed - JIVR features stored in ../data/processed/--")
 

@@ -86,7 +86,7 @@ def nig_simulation(config_file, root_directory = main_folder):
             NIG[subset,j] = simulation
         print("\r--Progress of NIG simulation: {:.2%}".format((i+1)/63), end='', flush=True)
 
-    #np.save(os.path.join(root_directory,'data','interim','NIG_simulation.npy'),NIG)
+    np.save(os.path.join(root_directory,'data','interim','NIG_simulation.npy'),NIG)
     print("\n--Simulation completed - NIG values stored in ../data/interim/--")
 
     return 
